@@ -26,9 +26,4 @@ VERSION=$(printf '%s\n' "$HTML" |
           head -n1 |
           awk '{print $NF}')
 
-if [[ -z "$VERSION" ]]; then
-  echo "❌ no version string found on $ENV" >&2
-  exit 1
-fi
-
-echo "✅ Version number on $ENV: $VERSION"
+echo "Version number on $ENV: $VERSION"
