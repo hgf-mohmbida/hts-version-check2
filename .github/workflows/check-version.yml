@@ -4,16 +4,18 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'HTS Environment (mirror | prerelease)'
+        description: "HTS Environment (mirror oder prerelease)"
         required: true
         default: mirror
 
 jobs:
   check:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
+      # Shell-Script ausführbar machen + starten
       - name: Run version script
         run: |
           chmod +x get_version.sh
