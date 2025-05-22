@@ -32,5 +32,3 @@ if [[ -z "$VERSION" ]]; then
 fi
 
 echo "✅ Version number on $ENV: $VERSION"
-
-
